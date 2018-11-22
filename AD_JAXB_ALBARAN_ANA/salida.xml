@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <pedido>
-    <facturarA>
-        <nombre> El Corte Ingles </nombre>
-        <calle>Uria 2 </calle>
-        <ciudad> Oviedo</ciudad>
-        <provincia> Asturias </provincia>
+    <facturarA pais="España">
+        <nombre>Pc Componentes</nombre>
+        <calle>Las Cuestas, 13</calle>
+        <ciudad>Langreo</ciudad>
+        <provincia>Asturias</provincia>
+        <codigoPostal>33900</codigoPostal>
     </facturarA>
     <comentario>Lineas de pedido</comentario>
     <articulos>
@@ -15,12 +16,11 @@
             <comentario>Lámpara de pie rojo</comentario>
             <fechaEnvio>2012-09-01</fechaEnvio>
         </articulo>
-        <articulo codigo="443-CA">
-            <nombreProducto>Alfombra</nombreProducto>
-            <cantidad>5</cantidad>
-            <precio>30.5</precio>
-            <comentario>Alfombra 180 x 200</comentario>
-            <fechaEnvio>2012-09-25</fechaEnvio>
+        <articulo codigo="x3s">
+            <nombreProducto>Naranjas</nombreProducto>
+            <cantidad>3</cantidad>
+            <precio>34.0</precio>
+            <fechaEnvio>2018-11-20</fechaEnvio>
         </articulo>
     </articulos>
 </pedido>

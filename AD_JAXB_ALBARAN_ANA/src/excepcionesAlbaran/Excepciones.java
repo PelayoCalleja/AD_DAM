@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jaxb_albaran;
+package excepcionesAlbaran;
 
 /**
  *
@@ -36,9 +36,9 @@ public class Excepciones {
     /**
      * Excepción Si el campo  va vacío
      */
-    public static class CampoVacioException extends Throwable {
+    public static class NombreIncorrectoException extends Throwable {
 
-        public CampoVacioException(String mensaje) {
+        public NombreIncorrectoException(String mensaje) {
             super(mensaje);
         }
     }
@@ -101,16 +101,7 @@ public class Excepciones {
         public ImporteIncorrectoException(String string) {
             super(string);
         }
-    }
-     /**
-      * Excepción si la lista está vacía
-      */
-     public static class ListaVaciaException extends Throwable {
 
-        public ListaVaciaException(String string) {
-            super(string);
-        }
-    }
    
     
-}
+}}
