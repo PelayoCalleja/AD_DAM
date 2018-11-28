@@ -106,7 +106,7 @@ public class UtilidadDeDiscos {
             if (!archivos[i].isDirectory()) {
                 String name = archivos[i].getName();
                 String extension = name.substring(name.lastIndexOf("."));
-                if (extension.equals("." + tipo)) {//
+                if (extension.equals("." + tipo)) {
                     borrar.add(archivos[i]);
                     archivosBorrar.add(archivos[i].getAbsolutePath());
                 }
