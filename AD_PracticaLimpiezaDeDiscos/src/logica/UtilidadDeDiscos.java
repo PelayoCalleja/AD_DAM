@@ -52,11 +52,8 @@ public class UtilidadDeDiscos {
         ArrayList<File> borrar = new ArrayList<>();
         ArrayList<String> archivosBorrar = new ArrayList<>();
         for (int i = 0; i < archivos.length; i++) {
-            //System.out.println(archivos[i]); 
             if (archivos[i].isDirectory()) {
-                //System.out.println("Es directorio");
                 if (archivos[i].listFiles().length == 0) {
-                    //System.out.println("Está vacío");
                     borrar.add(archivos[i]);
                     archivosBorrar.add(archivos[i].getAbsolutePath());
                 }
@@ -83,18 +80,16 @@ public class UtilidadDeDiscos {
         ArrayList<File> borrar = new ArrayList<>();
         ArrayList<String> archivosBorrar = new ArrayList<>();
         for (int i = 0; i < archivos.length; i++) {
-            //System.out.println(archivos[i]); 
             if (!archivos[i].isDirectory()) {
                 String name = archivos[i].getName();
                 String extension = name.substring(name.lastIndexOf("."));
-                //System.out.println(extension);
                 if (extension.equals(".pdf")) {//
                     borrar.add(archivos[i]);
                     archivosBorrar.add(archivos[i].getAbsolutePath());
                 }
             }
         }
-      archivosBorrar.size();
+        archivosBorrar.size();
         for (File fi : borrar) {
             fi.delete();
         }
@@ -108,14 +103,12 @@ public class UtilidadDeDiscos {
         ArrayList<File> borrar = new ArrayList<>();
         ArrayList<String> archivosBorrar = new ArrayList<>();
         for (int i = 0; i < archivos.length; i++) {
-            //System.out.println(archivos[i]); 
             if (!archivos[i].isDirectory()) {
                 String name = archivos[i].getName();
                 String extension = name.substring(name.lastIndexOf("."));
-                //System.out.println(extension);
                 if (extension.equals("." + tipo)) {//
                     borrar.add(archivos[i]);
-                     archivosBorrar.add(archivos[i].getAbsolutePath());
+                    archivosBorrar.add(archivos[i].getAbsolutePath());
                 }
             }
         }
@@ -141,11 +134,10 @@ public class UtilidadDeDiscos {
         ArrayList<File> borrar = new ArrayList<>();
         ArrayList<String> archivosBorrar = new ArrayList<>();
         for (int i = 0; i < archivos.length; i++) {
-            //System.out.println(archivos[i]); 
             if (!archivos[i].isDirectory()) {
                 if (archivos[i].length() > tam) {
                     borrar.add(archivos[i]);
-                     archivosBorrar.add(archivos[i].getAbsolutePath());
+                    archivosBorrar.add(archivos[i].getAbsolutePath());
                 }
             }
         }
@@ -169,11 +161,9 @@ public class UtilidadDeDiscos {
         int contador = 0;
         ArrayList<String> archivosBorrar = new ArrayList<>();
         for (int i = 0; i < archivos.length; i++) {
-            //System.out.println(archivos[i]); 
             if (!archivos[i].isDirectory()) {
                 String name = archivos[i].getName();
                 String extension = name.substring(name.lastIndexOf("."));
-                //System.out.println(extension);
                 if (extension.equals("." + tipo)) {
                     contador++;
                     archivosBorrar.add(archivos[i].getAbsolutePath());
@@ -184,45 +174,38 @@ public class UtilidadDeDiscos {
         return archivosBorrar;
     }
 
+    /**
+     *
+     * @param pathSeleccionado
+     * @return borra directorios recursivamente
+     */
     public ArrayList<String> eliminarDirectoriosRecursivo(String pathSeleccionado) {
-
         File f = new File(pathSeleccionado);
         File[] archivos = f.listFiles();
-
         if (archivos == null) {
             return null;
         }
-
         ArrayList<File> borrar = new ArrayList<>();
         ArrayList<String> archivosBorrar = new ArrayList<>();
         for (int i = 0; i < archivos.length; i++) {
-            //System.out.println(archivos[i]); 
-            // if (archivos[i].isDirectory()) {
-            //System.out.println("Es directorio");
-            //if (archivos[i].listFiles().length == 0) {
-            //System.out.println("Está vacío");
             borrar.add(archivos[i]);
             archivosBorrar.add(archivos[i].getAbsolutePath());
-            // }
-            // }
         }
-
         for (File fi : borrar) {
             try {
                 borrarRecursivo(fi);
             } catch (IOException ex) {
                 System.out.println(ex.getMessage());
-                // Logger.getLogger(UtilidadDeDiscos.class.getName()).log(Level.SEVERE, null, ex);
             }
-
         }
         return archivosBorrar;
     }
-/**
- * 
- * @param file
- * @throws IOException 
- */
+
+    /**
+     * Borrar Recursivo
+     * @param file
+     * @throws IOException
+     */
     public void borrarRecursivo(File file) throws IOException {
         if (file.isDirectory()) {
             if (file.listFiles().length == 0) {
@@ -230,7 +213,6 @@ public class UtilidadDeDiscos {
             } else {
                 for (File f : file.listFiles()) {
                     borrarRecursivo(f);
-
                 }
             }
         } else {
