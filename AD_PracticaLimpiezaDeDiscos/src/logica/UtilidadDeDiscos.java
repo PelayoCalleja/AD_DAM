@@ -96,6 +96,12 @@ public class UtilidadDeDiscos {
         return archivosBorrar;
     }
 
+    /**
+     *
+     * @param pathSeleccionado
+     * @param tipo
+     * @return
+     */
     public ArrayList<String> eliminarFicherosCualquierTipo(String pathSeleccionado, String tipo) {
 
         File f = new File(pathSeleccionado);
@@ -203,6 +209,7 @@ public class UtilidadDeDiscos {
 
     /**
      * Borrar Recursivo
+     *
      * @param file
      * @throws IOException
      */
