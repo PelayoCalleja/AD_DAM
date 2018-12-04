@@ -20,15 +20,9 @@ import jaxb.albaran.Articulos;
 import jaxb.albaran.Direccion;
 import jaxb.albaran.PedidoType;
 
-/**
- *
- * @author Pelayo
- */
 public class JAXB_ALBARAN {
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String[] args) throws  JAXBException, FileNotFoundException, DatatypeConfigurationException {
 
         JAXBElement jaxbElement = null;
