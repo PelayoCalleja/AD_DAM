@@ -31,7 +31,7 @@ import jaxb_albaran.Excepciones.UnmarshalExcepcion;
 
 /**
  *
- * @author Annie
+ * @author Pelayo
  */
 public class Metodos implements AlbaranInterface {
 
